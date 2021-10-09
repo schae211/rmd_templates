@@ -1,0 +1,54 @@
+---
+title: "TODO"
+autor: "Philipp SL Schäfer"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: united
+---
+
+# Set up
+
+Messages will be hidden and the output collapsed to make the Rmd more clear.
+Furthermore, the output will be cached to facilitate faster knitting of the Rmd.
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE, collapse = TRUE, message = FALSE,
+                      cache = TRUE)
+set.seed(42)
+```
+
+Loaded Packages.
+
+```{r}
+library(future)
+plan("multisession", workers=14)
+library(tidyverse)
+```
+
+# Loading and Processing Data
+
+# Analysis Metadata
+
+# Appendix
+
+## How to
+
+How to insert URL in RmD:
+
+```{r}
+#[text](link)
+```
+
+How to insert image in Rmd:
+
+```{r}
+#![alt text](path/here)
+```
+
+## Session Info
+
+```{r}
+sessionInfo()
+```
